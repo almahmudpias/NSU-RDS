@@ -1,0 +1,91 @@
+/* Navbar design */
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+/* Font Styling */
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(90deg, #0052D4, #4364F7, #c61e2f);
+  color: white;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar content layout */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Text block styling */
+.navbar-right {
+  text-align: left;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 1pc;
+}
+
+/* Animated Text Effect */
+.animate-text {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #66ccff, 0 0 30px #66ccff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #3399ff, 0 0 40px #3399ff;
+  }
+}
+
+/* Subtitle styling */
+.navbar-subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  
+  margin-top: 3px;
+}
+
+.subtitle-line {
+  font-size: 14px;
+  padding-left: 1pc
+}
+
+.subtitle-line-small {
+  font-size: 13px;
+  padding-left: 1pc
+}
+/* Typing text animation */
+.typing-text {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  font-size: 13px;
+  animation: typing 4s steps(50, end) forwards, blink 0.7s step-end infinite;
+  text-align: right;
+  margin-top: 5px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 220px } /* adjust width based on text length */
+}

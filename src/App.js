@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-
+import Navbar from './component/NavBar/navbar'; // Import the Navbar component
+import LoginBox from './component/LoginBox/loginbox'; // Import the LoginBox component
+import Footer from './component/Footer/footer'; // Import the Footer component
 function App() {
+  const [time, setTime] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const formattedTime = now.toLocaleString();
+      setTime(formattedTime);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="front-body">
+      <Navbar /> {/* Reusable component */}
+      <LoginBox /> {/* Reusable component */}
+      <Footer /> {/* Reusable component */}
+
+
+      
     </div>
   );
 }
