@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Captcha from './captcha';
 import ServerTime from './ServerTime';
-import './loginbox.css';
-import nsuLogo from '../login.png'; // Adjust the path as necessary
+import '../../pages/Login/login.css'; // Import the CSS for styling
+import nsuLogo from '../../assets/login.png'; // Adjust the path as necessary
+import { useNavigate } from 'react-router-dom'; // For redirecting
+
 function LoginBox() {
   const [step, setStep] = useState(1);
   const [username, setUsername] = useState('');
@@ -10,6 +12,9 @@ function LoginBox() {
   const [password, setPassword] = useState('');
   const [captchaToken, setCaptchaToken] = useState(null);
 
+  const navigate = useNavigate(); // Initialize navigation hook
+
+  // Handle Next button (Username Step)
   const handleNext = (e) => {
     e.preventDefault();
     if (username.length !== 7) {
@@ -20,15 +25,26 @@ function LoginBox() {
     }
   };
 
+  // Handle Login button (Password + CAPTCHA Step)
   const handleLogin = (e) => {
     e.preventDefault();
+
     if (!captchaToken) {
       alert('Please complete the CAPTCHA');
       return;
     }
-    alert(`Logging in as ${username} (Captcha token present, but no backend verification)`);
+
+    if (password.length < 4) {
+      alert('Invalid password');
+      return;
+    }
+
+    // Simulate successful login
+    alert(`Logging in as ${username}`);
+    navigate('/home'); // ✅ Redirect to Home page
   };
 
+  // Handle CAPTCHA token
   const onCaptchaChange = (token) => {
     setCaptchaToken(token);
   };
@@ -37,14 +53,18 @@ function LoginBox() {
     <div className="login-container">
       <div className="login-box">
         <div className="login-columns">
+          {/* Left Section with Logo */}
           <div className="login-left">
             <img src={nsuLogo} alt="NSU Logo" className="nsu-logo" />
             <h1>RDS</h1>
             {step === 2 && (
-              <p className="welcome-msg">Welcome, <strong>{username}</strong></p>
+              <p className="welcome-msg">
+                Welcome, <strong>{username}</strong>
+              </p>
             )}
           </div>
 
+          {/* Right Section with Form */}
           <div className="login-right">
             <h2>NSU Portal : Login</h2>
             <form onSubmit={step === 1 ? handleNext : handleLogin}>

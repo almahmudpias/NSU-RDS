@@ -12,7 +12,7 @@ body {
 }
 .front-body {
   min-height: 100vh;
-  width: 100%;
+  width: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

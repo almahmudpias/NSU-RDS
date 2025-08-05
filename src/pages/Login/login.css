@@ -1,7 +1,11 @@
 
 .login-container {
-  text-align: center;
-  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  transform: translateY(50px); /* Adjust this value to move it down */
 }
 
 .login-container h1 {
@@ -16,7 +20,7 @@
   margin: 0 0 25px 0;
   font-size: 28px;                    /* Larger for impact */
   font-weight: 700;                   /* Bold weight */
-  background: linear-gradient(45deg, #ffb06b, #000DFF, #00D4FF); /* Gradient */
+  background: linear-gradient(45deg, #ffb06b, #000DFF, #0f0f0f); /* Gradient */
   -webkit-background-clip: text;      /* Clip gradient to text */
   background-clip: text;              /* Standard property for compatibility */
   -webkit-text-fill-color: transparent; /* Hide original text color */
@@ -27,11 +31,15 @@
 }
 
 .login-box {
-  margin-top: 150px;
+  width: 400px; /* Match this with your container width */
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.6); /* Heavy shadow */
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.6);
+  position: relative; /* Establishes a positioning context */
+  padding-bottom: 50px
+ 
+  /* Remove the margin-top as we're using flex to center */
 }
 
 
@@ -98,7 +106,7 @@ button:hover {
 }
 
 .server-time {
-  margin-top: 5px;
+  margin-top: 20px; /* Space above the server time */
   padding: 8px 12px;
   font-size: 12px;
   color: #666;
@@ -107,7 +115,10 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: inline-block;
+  display: block; /* Changed from inline-block to block */
+  width: fit-content; /* Makes the box only as wide as its content */
+  margin-left: auto; /* These two center the element */
+  margin-right: auto;
   border-left: 3px solid #3498db;
   transition: all 0.3s ease;
 }
