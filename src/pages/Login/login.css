@@ -29,18 +29,16 @@
   font-family: 'Inter', 'Segoe UI', sans-serif; /* Clean sans-serif */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle depth */
 }
-
 .login-box {
-  width: 400px; /* Match this with your container width */
+  width: 500px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.6);
-  position: relative; /* Establishes a positioning context */
-  padding-bottom: 50px
- 
-  /* Remove the margin-top as we're using flex to center */
+  position: relative;
+  padding-bottom: 50px; /* <- missing semicolon was here */
 }
+
 
 
 .input-group {

@@ -3,7 +3,8 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PublicLayout from '../layouts/PublicLayout';
 import PrivateLayout from '../layouts/PrivateLayout';
-
+import { Suspense } from 'react';
+import Loading from '../components/Loader/Loader'; // Import the loading component
 import Login from '../pages/Login/login';
 import Dashboard from '../pages/Dashboard/dashboard';
 import Advising from '../pages/Advising/advising';
@@ -19,6 +20,7 @@ import Services from '../pages/Services/services';
 import Settings from '../pages/Settings/settings';
 
 const AppRoutes = () => (
+  
   <Routes>
     {/* Public Route */}
     <Route element={<PublicLayout />}>
@@ -45,6 +47,7 @@ const AppRoutes = () => (
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Route>
   </Routes>
+  
 );
 
 export default AppRoutes;

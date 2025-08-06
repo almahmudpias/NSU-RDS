@@ -3,7 +3,7 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 0px;
+  padding-top: 20px;
 }
 
 /* Animations */
@@ -73,6 +73,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
 }
 
 .profile-card:hover {
@@ -82,7 +83,7 @@
 
 .profile-header {
   display: flex;
-  align-items: center;
+
   padding: 2rem;
   background: linear-gradient(135deg, #5c7cfa 0%, #364fc7 100%);
   color: white;
