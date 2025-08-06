@@ -181,3 +181,144 @@
   border-radius: 3px;
   transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
+/* Add these new styles to your existing Dashboard.css */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.dashboard-left {
+  /* Existing left column styles */
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Side Cards */
+.side-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.side-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #5c7cfa 0%, #364fc7 100%);
+  color: white;
+}
+
+.side-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.side-card-badge {
+  background: white;
+  color: #4c6ef5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.side-card-content {
+  padding: 1.5rem;
+}
+
+.side-card-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.side-card-item:last-child {
+  border-bottom: none;
+}
+
+.side-card-item h4 {
+  font-size: 0.95rem;
+  color: #2b2d42;
+  margin-bottom: 0.25rem;
+}
+
+.side-card-item p {
+  font-size: 0.85rem;
+  color: #4a4e69;
+  margin-bottom: 0.25rem;
+}
+
+.side-card-date {
+  font-size: 0.75rem;
+  color: #868e96;
+  display: block;
+}
+
+.side-card-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  color: #4c6ef5;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.side-card-button:hover {
+  background: #e9ecef;
+}
+
+.side-card-action-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  color: #4a4e69;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.side-card-action-button:hover {
+  background: #e9ecef;
+  color: #2b2d42;
+}
+
+.side-card-action-button i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-right {
+    grid-row: 1; /* Move right column to top on mobile */
+  }
+}

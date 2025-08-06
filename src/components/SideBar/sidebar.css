@@ -3,9 +3,10 @@
 .sidebar {
   width: 250px;
   background: linear-gradient(to bottom, #060a4e, #031f3c);
-  height: calc(100vh - 70px); /* Adjust for header height */
-  position: sticky;
-  top: 70px; /* Same height as header */
+  height: 100vh; /* FULL height */
+  position: fixed; /* So it’s independent and scrollable */
+  top: 70px; /* Matches header height */
+  bottom: 0;
   overflow-y: auto;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins', sans-serif;
@@ -14,6 +15,14 @@
   z-index: 10;
 }
 
+
+.sidebar .scrollable-content {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+
+/* Rest of your existing styles remain exactly the same */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -163,4 +172,149 @@
     transform: none;
     animation: none;
   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #060a4e, #031f3c);
+  height: calc(100vh - 70px); /* Keep this calculation */
+  position: sticky; /* Keep it sticky */
+  top: 70px; /* Same as header height */
+  overflow-y: auto; /* Enable scrolling */
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+  border-right: 1px solid #dee2e6;
+  z-index: 10;
+}
+
+/* Add this new rule to prevent content hiding */
+.sidebar-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Add this to create space for the sidebar */
+.main-content {
+  margin-left: 250px; /* Same as sidebar width */
+  width: calc(100% - 250px);
+}
+
+/* Rest of your existing styles remain exactly the same */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ... (keep all your existing animation and hover styles) ... */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    z-index: 1000;
+    height: 100vh;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* Advising Submenu Styles */
+.sidebar-parent-item {
+  --hover-bg: rgba(255, 255, 255, 0.15);
+  --active-bg: rgba(255, 255, 255, 0.25);
+  --border-glow: rgba(76, 110, 245, 0.7);
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 18px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  border-left: 4px solid transparent;
+  border-radius: 8px;
+}
+
+.sidebar-parent-item:hover {
+  background: var(--hover-bg);
+  border-left: 4px solid var(--border-glow);
+  color: white;
+  transform: translateX(8px) translateY(-2px);
+  box-shadow: 
+    0 10px 15px -3px rgba(76, 110, 245, 0.3),
+    0 4px 6px -4px rgba(76, 110, 245, 0.3);
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin: 8px 0;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+}
+
+.submenu li a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(76, 110, 245, 0.5);
+  transform: translateX(5px);
+}
+
+.submenu li a::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(76, 110, 245, 0.8);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make sure parent items stay visible when submenu is open */
+.sidebar li:hover > a:not(.submenu li a) {
+  background: var(--hover-bg);
 }

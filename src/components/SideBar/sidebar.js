@@ -6,6 +6,7 @@ import './sidebar.css';
 function Sidebar() {
   return (
     <div className="sidebar">
+      <div className="scrollable-content">
       <ul>
         <li><Link to="/dashboard">🏠 Dashboard</Link></li>
         <li><Link to="/advising">📝 Advising</Link></li>
@@ -20,6 +21,7 @@ function Sidebar() {
         <li><Link to="/services">🛠 Services</Link></li>
         <li><Link to="/settings">⚙ Settings</Link></li>
       </ul>
+    </div>
     </div>
   );
 }
