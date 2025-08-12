@@ -1,72 +1,69 @@
-# Getting Started with Create React App
+# NSU Research Data System (RDS) 🎓
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![MERN Stack](https://img.shields.io/badge/MERN-MongoDB%2C%20Express%2C%20React%2C%20Node-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Status](https://img.shields.io/badge/Status-Live-brightgreen)
 
-## Available Scripts
+A real-time research management portal for North South University built with the MERN stack. Streamlines research project lifecycle from submission to publication with secure role-based access.
 
-In the project directory, you can run:
+## 📺 Live Demo
+[![Demo Video](https://img.shields.io/badge/Watch_Demo-Video-red)](https://youtu.be/64SJX_nKjMA)
 
-### `npm start`
+## ✨ Key Features
+- **Role-Based Access Control**
+  - Admin (IT Staff)
+  - Registrar Office
+  - Faculty Members
+  - Students
+- **Research Project Management**
+  - Project submission & tracking
+  - Document upload/versioning
+  - Approval workflows
+- **Advanced Analytics**
+  - Funding statistics
+  - Publication metrics
+  - Department-wise reports
+- **Security**
+  - JWT authentication
+  - Data encryption
+  - Session management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
+**Frontend**  
+![React](https://img.shields.io/badge/React-18.2-blue)
+![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC)
+![Material UI](https://img.shields.io/badge/Material%20UI-5.14-0081CB)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend**  
+![Node.js](https://img.shields.io/badge/Node.js-20.5-green)
+![Express](https://img.shields.io/badge/Express-4.18-lightgrey)
+![MongoDB](https://img.shields.io/badge/MongoDB-7.0-green)
 
-### `npm test`
+**DevOps**  
+![Git](https://img.shields.io/badge/Git-2.42-orange)
+![JWT](https://img.shields.io/badge/JWT-Auth-000000)
+![Agile](https://img.shields.io/badge/Agile-Methodology-blueviolet)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚢 Deployment
+The system is deployed on NSU's secure infrastructure featuring:
+- HTTPS encryption
+- Load balancing for high availability
+- Automated daily backups
+- Role-based access control
+- Real-time monitoring
 
-### `npm run build`
+## 🙏 Acknowledgments
+- North South University IT Department
+- Faculty Advisory Committee
+- Beta Testing Team
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📬 Contact
+**Md Abdullah Al Mahmud Pias**  
+📧 Email: [abdullahpias09@gmail.com](mailto:abdullahpias09@gmail.com)  
+🔗 LinkedIn: [linkedin.com/in/almahmudpias](https://www.linkedin.com/in/almahmudpias/)  
+🐙 GitHub: [github.com/yourusername](https://github.com/yourusername)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# NSU-RDS
-# NSU-RDS
+**Developed for North South University**  
+*July 2025 - Present*
