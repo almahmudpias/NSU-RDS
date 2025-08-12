@@ -51,6 +51,13 @@ The system is deployed on NSU's secure infrastructure featuring:
 - Automated daily backups
 - Role-based access control
 - Real-time monitoring
+## 🖥️ UI Showcase
+
+### Desktop Views
+<div align="center">
+  <img src="../../" alt="" width="45%">
+  <img src="./screenshots/research-submission.png" alt="" width="45%">
+</div>
 
 ## 🙏 Acknowledgments
 - North South University IT Department
