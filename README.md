@@ -55,8 +55,8 @@ The system is deployed on NSU's secure infrastructure featuring:
 
 ### Desktop Views
 <div align="center">
-  <img src="../../" alt="" width="45%">
-  <img src="./screenshots/research-submission.png" alt="" width="45%">
+  <img src="./SS/1.png" alt="" width="45%">
+  <img src="./SS/2.png" alt="" width="45%">
 </div>
 
 ## 🙏 Acknowledgments
