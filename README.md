@@ -57,6 +57,12 @@ The system is deployed on NSU's secure infrastructure featuring:
 <div align="center">
   <img src="./SS/1.png" alt="" width="45%">
   <img src="./SS/2.png" alt="" width="45%">
+  <img src="./SS/3.png" alt="" width="45%">
+  <img src="./SS/4.png" alt="" width="45%">
+  <img src="./SS/5.png" alt="" width="45%">
+  <img src="./SS/6.png" alt="" width="45%">
+  <img src="./SS/7.png" alt="" width="45%">
+  
 </div>
 
 ## 🙏 Acknowledgments
